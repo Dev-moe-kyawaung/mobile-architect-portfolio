@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compose UI Gallery - Moe Kyaw Aung">
+    <title>UI Gallery | MKA Architect</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-glass">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <span class="logo-text">MKA<span class="text-accent">.</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="roadmap.html">Roadmap</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="architecture.html">Architecture</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Content -->
+    <div data-page-content="gallery">
+        <section class="section gallery-page mt-5 pt-5">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Compose UI Gallery</h2>
+                    <div class="section-line"></div>
+                    <p class="mt-3">Explore my latest UI implementations</p>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="gallery-filters mb-4 text-center">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="auth">Authentication</button>
+                    <button class="filter-btn" data-filter="dashboard">Dashboard</button>
+                    <button class="filter-btn" data-filter="profile">Profile</button>
+                    <button class="filter-btn" data-filter="commerce">E-commerce</button>
+                    <button class="filter-btn" data-filter="social">Social</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="row g-4 gallery-grid">
+                    <!-- Auth UIs -->
+                    <div class="col-lg-4 col-md-6 gallery-item" data-category="auth">
+                        <div class="ui-card glass-card">
+                            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795859/copilot_image_1778794430377_n7xlmz.png" alt="Login Screen" class="card-img-top">
+                            <div class="card-body p-4">
+                                <h5>Modern Login Screen</h5>
+                                <p>Authentication UI with material 3 design</p>
+                                <div class="tags">
+                                    <span class="tag">Compose</span>
+                                    <span class="tag">Material3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 gallery-item" data-category="auth">
+                        <div class="ui-card glass-card">
+                            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795829/copilot_image_1778795000722_okryxj.png" alt="Registration Screen" class="card-img-top">
+                            <div class="card-body p-4">
+                                <h5>Register Screen</h5>
+                                <p>Multi-step registration flow</p>
+                                <div class="tags">
+                                    <span class="tag">Form</span>
+                                    <span class="tag">Animation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard -->
+                    <div class="col-lg-4 col-md-6 gallery-item" data-category="dashboard">
+                        <div class="ui-card glass-card">
+                            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778747388/image-1_1_khsx9s.png" alt="Analytics Dashboard" class="card-img-top">
+                            <div class="card-body p-4">
+                                <h5>Analytics Dashboard</h5>
+                                <p>Data visualization with custom charts</p>
+                                <div class="tags">
+                                    <span class="tag">Charts</span>
+                                    <span class="tag">Data</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile -->
+                    <div class="col-lg-4 col-md-6 gallery-item" data-category="profile">
+                        <div class="ui-card glass-card">
+                            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763531/MKA_12_iv8kpm.webp" alt="Profile Screen" class="card-img-top">
+                            <div class="card-body p-4">
+                                <h5>User Profile</h5>
+                                <p>Interactive profile with avatar</p>
+                                <div class="tags">
+                                    <span class="tag">Profile</span>
+                                    <span class="tag">Avatar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-commerce -->
+                    <div class="col-lg-4 col-md-6 gallery-item" data-category="commerce">
+                        <div class="ui-card glass-card">
+                            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795822/preview_dzhqvv.webp" alt="Product Card" class="card-img-top">
+                            <div class="card-body p-4">
+                                <h5>Product Listing</h5>
+                                <p>E-commerce product cards with animations</p>
+                                <div class="tags">
+                                    <span class="tag">Commerce</span>
+                                    <span class="tag">Grid</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social -->
+                    <div class="col-lg-4 col-md-6 gallery-item" data-category="social">
+                        <div class="ui-card glass-card">
+                            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795801/MKA_22_felevo.webp" alt="Social Feed" class="card-img-top">
+                            <div class="card-body p-4">
+                                <h5>Social Feed</h5>
+                                <p>Dynamic social media feed interface</p>
+                                <div class="tags">
+                                    <span class="tag">Social</span>
+                                    <span class="tag">Feed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/router.js"></script>
+</body>
+</html>
