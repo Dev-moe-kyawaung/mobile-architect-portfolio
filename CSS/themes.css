@@ -1,0 +1,88 @@
+/* ============ DARK THEME (DEFAULT) ============ */
+[data-theme="dark"] {
+    --primary-color: #00d4ff;
+    --secondary-color: #7b2ff7;
+    --bg-dark: #0a0a0f;
+    --bg-darker: #05050a;
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* ============ LIGHT THEME ============ */
+[data-theme="light"] {
+    --primary-color: #0066ff;
+    --secondary-color: #7b2ff7;
+    --bg-dark: #f5f5f5;
+    --bg-darker: #ffffff;
+    --bg-card: rgba(0, 0, 0, 0.05);
+    --text-primary: #000000;
+    --text-secondary: #666666;
+    --glass-border: rgba(0, 0, 0, 0.1);
+    background: var(--bg-dark);
+    color: var(--text-primary);
+}
+
+/* Dark mode specific styles */
+[data-theme="dark"] .glass-card {
+    background: var(--bg-card);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+    color: var(--text-primary);
+}
+
+/* Light mode specific adjustments */
+[data-theme="light"] .navbar-glass {
+    background: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-theme="light"] .nav-link {
+    color: #000 !important;
+}
+
+[data-theme="light"] .footer {
+    background: #ffffff;
+    color: #000;
+}
+
+[data-theme="light"] .footer-links a {
+    color: #000;
+}
+
+[data-theme="light"] .timeline-content {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .pipeline-stage {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .arch-layer {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Theme transition */
+body {
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Language-specific styles */
+[data-lang="mm"] .burmese-hidden {
+    display: none;
+}
+
+[data-lang="en"] .english-hidden {
+    display: none;
+}
+
+/* Mobile responsive theme adjustments */
+@media (max-width: 768px) {
+    [data-theme="dark"] .navbar-glass,
+    [data-theme="light"] .navbar-glass {
+        background: var(--bg-dark) !important;
+    }
+}
