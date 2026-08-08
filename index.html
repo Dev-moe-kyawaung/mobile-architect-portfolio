@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Senior Mobile Architect Portfolio - Moe Kyaw Aung - Android Development Expert">
+    <meta name="keywords" content="Android, Kotlin, Mobile Architect, Compose, MVVM, Clean Architecture">
+    <meta name="author" content="Moe Kyaw Aung">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Moe Kyaw Aung - Mobile App Architect">
+    <meta property="og:description" content="Senior Android Developer with 12+ years experience">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://Dev-moe-kyawaung.github.io/portfolio">
+    
+    <title>MKA | Mobile App Architect</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/themes.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="loader-container">
+            <div class="loader-ring"></div>
+            <div class="loader-ring-inner"></div>
+            <span class="loader-text">LOADING</span>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- 3D Floating Elements -->
+    <div class="floating-elements">
+        <div class="floating-cube" data-speed="0.3">K</div>
+        <div class="floating-circle" data-speed="0.5"></div>
+        <div class="floating-diamond" data-speed="0.2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-glass" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <span class="logo-text">MKA<span class="text-accent">.</span></span>
+                <span class="logo-sub">ARCHITECT</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#roadmap">Roadmap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#architecture">Architecture</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#benchmarks">Benchmarks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ci-cd">CI/CD</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                
+                <!-- Language Toggle -->
+                <div class="lang-toggle">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="mm">မြန်</button>
+                </div>
+                
+                <!-- Theme Toggle -->
+                <div class="theme-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="themeSwitch">
+                        <span class="slider"><i class="fas fa-moon"></i></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-3d-container">
+                    <div class="hero-3d-phone">
+                        <div class="phone-screen">
+                            <div class="phone-content">
+                                <i class="fab fa-android"></i>
+                                <h3>Android</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-text">
+                    <span class="hero-tag"># Senior Mobile Architect</span>
+                    <h1 id="heroName">Moe Kyaw Aung</h1>
+                    <div class="typewriter" id="typewriter"></div>
+                    <p class="hero-description" data-translate="hero_desc">
+                        Architecting the future of mobile applications with cutting-edge technology and elegant solutions.
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="12">0</span>
+                            <span class="stat-label" data-translate="years">Years</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="3000">0</span>
+                            <span class="stat-label" data-translate="apps">Apps Built</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="50">0</span>
+                            <span class="stat-label" data-translate="projects">Projects</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary btn-glow">
+                            <i class="fas fa-rocket"></i> <span data-translate="hire_me">Hire Me</span>
+                        </a>
+                        <a href="#projects" class="btn btn-outline">
+                            <i class="fas fa-code"></i> <span data-translate="view_work">View Work</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="about_title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-card glass-card">
+                        <div class="profile-container">
+                            <img src="assets/img/profile.jpg" alt="Moe Kyaw Aung" class="profile-img">
+                            <div class="profile-status"><i class="fas fa-circle"></i> Available for work</div>
+                        </div>
+                        <h3 data-translate="about_name">Moe Kyaw Aung</h3>
+                        <p class="role" data-translate="about_role">Senior Android Architect & Developer</p>
+                        <p class="bio" data-translate="about_bio">
+                            Passionate mobile architect with 12 years of experience building world-class Android applications. 
+                            Expert in Kotlin, Jetpack Compose, and modern architecture patterns.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="about-details glass-card">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong data-translate="location">Location</strong>
+                                <p>Tachileik, Myanmar ↔ Bangkok, Thailand</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong data-translate="email">Email</strong>
+                                <p>moekyawaung@programmer.net</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong data-translate="phone">Phone</strong>
+                                <p>+95 9 889 000 889</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-play-store"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="skills_title">Skills Matrix</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="skills-container">
+                <!-- Skill Graph -->
+                <div class="skill-graph glass-card">
+                    <h3 data-translate="core_skills">Core Skills</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="Kotlin" data-level="95">
+                            <div class="skill-info">
+                                <span class="skill-name">Kotlin</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Jetpack Compose" data-level="90">
+                            <div class="skill-info">
+                                <span class="skill-name">Jetpack Compose</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Clean Architecture" data-level="92">
+                            <div class="skill-info">
+                                <span class="skill-name">Clean Architecture</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="MVVM" data-level="95">
+                            <div class="skill-info">
+                                <span class="skill-name">MVVM</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3D Skill Radar -->
+                <div class="skill-radar glass-card">
+                    <h3 data-translate="skill_radar">Skill Radar</h3>
+                    <div id="radarChart" class="radar-chart"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="roadmap_title">Android Development Roadmap</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="roadmap-container">
+                <div class="roadmap-timeline">
+                    <div class="timeline-item" data-year="2024">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>AI & ML Integration</h4>
+                            <p>On-device ML, TensorFlow Lite, ML Kit</p>
+                            <div class="roadmap-progress">
+                                <span class="progress-tag active">Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-year="2023">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Kotlin Multiplatform</h4>
+                            <p>Sharing code across platforms</p>
+                            <div class="roadmap-progress">
+                                <span class="progress-tag almost">In Progress</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-year="2022">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Jetpack Compose Mastery</h4>
+                            <p>Declarative UI, Material 3</p>
+                            <div class="roadmap-progress">
+                                <span class="progress-tag active">Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More timeline items -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compose UI Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="gallery_title">Compose UI Gallery</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item glass-card" data-category="login">
+                    <img src="assets/img/gallery/login.jpg" alt="Login UI">
+                    <div class="gallery-overlay">
+                        <h4>Modern Login</h4>
+                        <p>User authentication interface</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card" data-category="dashboard">
+                    <img src="assets/img/gallery/dashboard.jpg" alt="Dashboard">
+                    <div class="gallery-overlay">
+                        <h4>Analytics Dashboard</h4>
+                        <p>Data visualization UI</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card" data-category="ecommerce">
+                    <img src="assets/img/gallery/ecommerce.jpg" alt="E-commerce">
+                    <div class="gallery-overlay">
+                        <h4>E-commerce</h4>
+                        <p>Product catalog interface</p>
+                    </div>
+                </div>
+                <!-- More gallery items -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Lab Section -->
+    <section id="architecture" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="arch_title">Architecture Lab</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="architecture-diagram">
+                <div class="arch-layer presentation-layer">
+                    <i class="fas fa-display"></i>
+                    <span>Presentation Layer</span>
+                </div>
+                <div class="arch-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="arch-layer domain-layer">
+                    <i class="fas fa-cube"></i>
+                    <span>Domain Layer</span>
+                </div>
+                <div class="arch-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="arch-layer data-layer">
+                    <i class="fas fa-database"></i>
+                    <span>Data Layer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Benchmarks Section -->
+    <section id="benchmarks" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="benchmarks_title">Performance Benchmarks</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="benchmark-cards">
+                <div class="benchmark-card glass-card">
+                    <i class="fas fa-bolt"></i>
+                    <div class="benchmark-value" data-target="60">0</div>
+                    <div class="benchmark-label">FPS UI</div>
+                    <div class="benchmark-chart">
+                        <canvas id="fpsChart"></canvas>
+                    </div>
+                </div>
+                <div class="benchmark-card glass-card">
+                    <i class="fas fa-memory"></i>
+                    <div class="benchmark-value" data-target="28">0</div>
+                    <div class="benchmark-label">Memory (MB)</div>
+                    <div class="benchmark-chart">
+                        <canvas id="memoryChart"></canvas>
+                    </div>
+                </div>
+                <div class="benchmark-card glass-card">
+                    <i class="fas fa-clock"></i>
+                    <div class="benchmark-value" data-target="180">0</div>
+                    <div class="benchmark-label">Startup (ms)</div>
+                    <div class="benchmark-chart">
+                        <canvas id="startupChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CI/CD Section -->
+    <section id="ci-cd" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="cicd_title">CI/CD Pipeline</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="pipeline-visual">
+                <div class="pipeline-stage">
+                    <i class="fab fa-github"></i>
+                    <span>Push Code</span>
+                </div>
+                <div class="pipeline-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="pipeline-stage">
+                    <i class="fas fa-vial"></i>
+                    <span>Test</span>
+                </div>
+                <div class="pipeline-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="pipeline-stage">
+                    <i class="fas fa-robot"></i>
+                    <span>Build</span>
+                </div>
+                <div class="pipeline-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="pipeline-stage">
+                    <i class="fas fa-rocket"></i>
+                    <span>Deploy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="contact_title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info glass-card">
+                    <h3 data-translate="contact_info">Let's build something amazing together</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>moekyawaung@programmer.net</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+95 9 889 000 889</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Myanmar 🇲🇲 ↔ Thailand 🇹🇭</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form glass-card" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> <span data-translate="send_msg">Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Moe Kyaw Aung. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom Context Menu -->
+    <div id="contextMenu" class="custom-context-menu">
+        <a href="#home"><i class="fas fa-home"></i> Home</a>
+        <a href="#about"><i class="fas fa-user"></i> About</a>
+        <a href="#skills"><i class="fas fa-chart-bar"></i> Skills</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/router.js"></script>
+</body>
+</html>
