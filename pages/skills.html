@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skills Matrix - Moe Kyaw Aung Mobile Architect">
+    <title>Skills | MKA Architect</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/themes.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-glass">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <span class="logo-text">MKA<span class="text-accent">.</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="roadmap.html">Roadmap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="architecture.html">Architecture</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Skills Content -->
+    <div data-page-content="skills">
+        <section class="section skills-page mt-5 pt-5">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Skills Matrix</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <!-- Core Skills with Chart -->
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-8">
+                        <div class="glass-card p-4">
+                            <h4 class="mb-4">Technical Skills</h4>
+                            <div class="skills-grid">
+                                <div class="skill-category">
+                                    <h6>Languages</h6>
+                                    <div class="skill-item" data-level="98">
+                                        <div class="skill-info">
+                                            <span>Kotlin</span>
+                                            <span>98%</span>
+                                        </div>
+                                        <div class="skill-bar"><div class="skill-progress"></div></div>
+                                    </div>
+                                    <div class="skill-item" data-level="85">
+                                        <div class="skill-info">
+                                            <span>Java</span>
+                                            <span>85%</span>
+                                        </div>
+                                        <div class="skill-bar"><div class="skill-progress"></div></div>
+                                    </div>
+                                    <div class="skill-item" data-level="70">
+                                        <div class="skill-info">
+                                            <span>Python</span>
+                                            <span>70%</span>
+                                        </div>
+                                        <div class="skill-bar"><div class="skill-progress"></div></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-category">
+                                    <h6>Frameworks</h6>
+                                    <div class="skill-item" data-level="95">
+                                        <div class="skill-info">
+                                            <span>Jetpack Compose</span>
+                                            <span>95%</span>
+                                        </div>
+                                        <div class="skill-bar"><div class="skill-progress"></div></div>
+                                    </div>
+                                    <div class="skill-item" data-level="90">
+                                        <div class="skill-info">
+                                            <span>Material 3</span>
+                                            <span>90%</span>
+                                        </div>
+                                        <div class="skill-bar"><div class="skill-progress"></div></div>
+                                    </div>
+                                    <div class="skill-item" data-level="80">
+                                        <div class="skill-info">
+                                            <span>Flutter</span>
+                                            <span>80%</span>
+                                        </div>
+                                        <div class="skill-bar"><div class="skill-progress"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="glass-card p-4">
+                            <h4 class="mb-4">Architecture</h4>
+                            <canvas id="architectureChart" width="300" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies Grid -->
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="glass-card p-4 hover-grow">
+                            <h5><i class="fas fa-database text-accent"></i> Database</h5>
+                            <div class="tags mt-3">
+                                <span class="tag">Room</span>
+                                <span class="tag">SQLite</span>
+                                <span class="tag">Realm</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">API</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="glass-card p-4 hover-grow">
+                            <h5><i class="fas fa-cloud text-accent"></i> Cloud Services</h5>
+                            <div class="tags mt-3">
+                                <span class="tag">Firebase</span>
+                                <span class="tag">AWS</span>
+                                <span class="tag">Google Cloud</span>
+                                <span class="tag">Azure</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="glass-card p-4 hover-grow">
+                            <h5><i class="fas fa-code-branch text-accent"></i> DevOps</h5>
+                            <div class="tags mt-3">
+                                <span class="tag">GitHub Actions</span>
+                                <span class="tag">Jenkins</span>
+                                <span class="tag">Fastlane</span>
+                                <span class="tag">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="glass-card p-4">
+                            <h4 class="mb-4">Professional Skills</h4>
+                            <div class="d-flex flex-wrap gap-3">
+                                <div class="skill-pill" data-skill="Leadership">Leadership</div>
+                                <div class="skill-pill" data-skill="Communication">Communication</div>
+                                <div class="skill-pill" data-skill="Problem Solving">Problem Solving</div>
+                                <div class="skill-pill" data-skill="Team Management">Team Management</div>
+                                <div class="skill-pill" data-skill="Critical Thinking">Critical Thinking</div>
+                                <div class="skill-pill" data-skill="Time Management">Time Management</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Router Loader -->
+    <div class="router-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/router.js"></script>
+</body>
+</html>
