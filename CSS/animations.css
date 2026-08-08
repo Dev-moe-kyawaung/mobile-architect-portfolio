@@ -1,0 +1,127 @@
+/* ============ CINEMATIC TRANSITIONS ============ */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@keyframes rotateIn {
+    from { transform: rotate(-180deg); opacity: 0; }
+    to { transform: rotate(0deg); opacity: 1; }
+}
+
+@keyframes flipIn {
+    from { transform: perspective(400px) rotateY(90deg); opacity: 0; }
+    to { transform: perspective(400px) rotateY(0deg); opacity: 1; }
+}
+
+@keyframes slideFromBottom {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(0, 212, 255, 0.6); }
+}
+
+/* Scene transition */
+.scene-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    transform: scale(0);
+    border-radius: 50%;
+    z-index: 1000;
+    pointer-events: none;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scene-transition.active {
+    transform: scale(2);
+}
+
+/* Floating elements animation */
+.floating-cube {
+    position: fixed;
+    animation: floatAround 4s ease-in-out infinite;
+}
+
+.floating-circle {
+    position: fixed;
+    border-radius: 50%;
+    animation: floatAround 5s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.floating-diamond {
+    position: fixed;
+    transform: rotate(45deg);
+    animation: floatAround 6s ease-in-out infinite;
+}
+
+@keyframes floatAround {
+    0%, 100% { transform: translate(0, 0) rotate(); }
+    25% { transform: translate(20px, -20px); }
+    50% { transform: translate(-10px, 15px); }
+    75% { transform: translate(15px, 10px); }
+}
+
+/* Page load animation */
+.page-enter {
+    animation: fadeIn 0.5s ease;
+}
+
+.page-enter-active {
+    animation: slideFromBottom 0.5s ease;
+}
+
+/* Hover animations */
+.hover-grow:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.hover-glow:hover {
+    animation: glowPulse 1.5s ease infinite;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    opacity: 0.6;
+}
+
+.mouse {
+    width: 25px;
+    height: 50px;
+    border: 2px solid var(--text-primary);
+    border-radius: 20px;
+    position: relative;
+    margin: 0 auto 10px;
+}
+
+.wheel {
+    width: 5px;
+    height: 10px;
+    background: var(--primary-color);
+    border-radius: 5px;
+    margin: 5px auto;
+    animation: wheelMove 1.5s ease infinite;
+}
+
+@keyframes wheelMove {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(20px); opacity: 0; }
+}
