@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Performance Benchmarks - Moe Kyaw Aung">
+    <title>Benchmarks | MKA Architect</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-glass">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <span class="logo-text">MKA<span class="text-accent">.</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="benchmarks.html">Benchmarks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ci-cd.html">CI/CD</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Benchmarks Content -->
+    <div data-page-content="benchmarks">
+        <section class="benchmarks-page mt-5 pt-5">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Performance Benchmarks</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <!-- Live Performance Metrics -->
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-6">
+                        <div class="glass-card p-4">
+                            <h4><i class="fas fa-bolt text-accent"></i> FPS Monitor</h4>
+                            <canvas id="fpsMonitor" class="w-100" style="height: 200px;"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="glass-card p-4">
+                            <h4><i class="fas fa-memory text-accent"></i> Memory Usage</h4>
+                            <canvas id="memoryMonitor" class="w-100" style="height: 200px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benchmark Comparison Table -->
+                <div class="glass-card p-4">
+                    <h4 class="mb-4"><i class="fas fa-chart-bar text-accent"></i> Performance Comparison</h4>
+                    <div class="table-responsive">
+                        <table class="table table-dark table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>Before Optimization</th>
+                                    <th>After Optimization</th>
+                                    <th>Improvement</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Startup Time</td>
+                                    <td>450ms</td>
+                                    <td>180ms</td>
+                                    <td><span class="badge bg-success">150% faster</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Memory Usage</td>
+                                    <td>45MB</td>
+                                    <td>28MB</td>
+                                    <td><span class="badge bg-success">38% less</span></td>
+                                </tr>
+                                <tr>
+                                    <td>UI Rendering</td>
+                                    <td>Frame drops</td>
+                                    <td>Steady 60fps</td>
+                                    <td><span class="badge bg-success">Smooth</span></td>
+                                </tr>
+                                <tr>
+                                    <td>APK Size</td>
+                                    <td>22MB</td>
+                                    <td>12MB</td>
+                                    <td><span class="badge bg-success">45% smaller</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Optimization Tips -->
+                <div class="row mt-5 g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="optimization-card glass-card p-4 hover-grow">
+                            <i class="fas fa-code text-accent"></i>
+                            <h5>Code Memory</h5>
+                            <p>Function inlining, Kotlin coroutines for concurrency</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="optimization-card glass-card p-4">
+                            <i class="fas fa-image text-accent"></i>
+                            <h5>Image Loading</h5>
+                            <p>Coil/Glide caching strategies, compressed formats</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="optimization-card glass-card p-4">
+                            <i class="fas fa-database text-accent"></i>
+                            <h5>Database</h5>
+                            <p>Room query optimization, indexing strategies</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="optimization-card glass-card p-4">
+                            <i class="fas fa-network-wired text-accent"></i>
+                            <h5>Network</h5>
+                            <p>OkHttp caching, API payload compression</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/router.js"></script>
+</body>
+</html>
